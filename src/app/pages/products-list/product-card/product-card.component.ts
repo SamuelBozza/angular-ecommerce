@@ -7,7 +7,6 @@ import { CartService } from '../../../services/cart.service';
   selector: 'app-product-card',
   imports: [PrimaryButtonComponent],
   templateUrl: './product-card.component.html',
-  styleUrl: './product-card.component.scss'
 })
 export class ProductCardComponent {
 
