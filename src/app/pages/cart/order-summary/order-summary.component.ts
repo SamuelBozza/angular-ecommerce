@@ -18,6 +18,6 @@ export class OrderSummaryComponent {
       total += item.price;
     }
 
-    return total;
+    return parseFloat(total.toFixed(2));
   })
 }
