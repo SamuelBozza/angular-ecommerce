@@ -13,7 +13,12 @@ export class CartService {
   }
 
   removeFromCart(id: number) {
-    this.cart.set(this.cart().filter((p) => p.id !== id));
+    const cartItems = [...this.cart()];
+    const index = cartItems.findIndex(p => p.id === id);
+    if (index > -1) {
+      cartItems.splice(index, 1);
+      this.cart.set(cartItems);
+    }
   }
 
   constructor() { }
